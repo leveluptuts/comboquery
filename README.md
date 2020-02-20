@@ -1,4 +1,4 @@
-# QraphQL Combo Query
+# GraphQL Combo Query
 
 Inspired by: https://github.com/apollographql/graphql-tag/issues/169#issuecomment-568752182
 
