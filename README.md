@@ -1,27 +1,36 @@
-# TSDX Bootstrap
+# QraphQL Combo Query
 
-This project was bootstrapped with [TSDX](https://github.com/jaredpalmer/tsdx).
+Inspired by: https://github.com/apollographql/graphql-tag/issues/169#issuecomment-568752182
 
-## Local Development
+## Usage
 
-Below is a list of commands you will probably find useful.
+`npm install @leveluptuts/comboquery`
 
-### `npm start` or `yarn start`
+```tsx
+import SINGLE_POST_QUERY from './graphql/SinglePost.graphql'
+import USER_QUERY from './graphql/UserQuery.graphql'
+// Import your queries OR write them separately with gql``
+const SomeComponent = () => {
+  const { slug } = useParams()
+	const COMBO_QUERY = comboQuery([SINGLE_POST_QUERY, USER_QUERY])
 
-Runs the project in development/watch mode. Your project will be rebuilt upon changes. TSDX has a special logger for you convenience. Error messages are pretty printed and formatted for compatibility VS Code's Problems tab.
+	// This example is using Apollo React Hooks
+	const { loading, data, error } = useQuery(COMBO_QUERY, {
+    variables: { slug },
+	})
 
-<img src="https://user-images.githubusercontent.com/4060187/52168303-574d3a00-26f6-11e9-9f3b-71dbec9ebfcb.gif" width="600" />
+	// ... the rest of your stuffs
 
-Your library will be rebuilt if you make edits.
+```
 
-### `npm run build` or `yarn build`
+## Level Up Tutorials
 
-Bundles the package to the `dist` folder.
-The package is optimized and bundled with Rollup into multiple formats (CommonJS, UMD, and ES Module).
+https://www.leveluptutorials.com
 
-<img src="https://user-images.githubusercontent.com/4060187/52168322-a98e5b00-26f6-11e9-8cf6-222d716b75ef.gif" width="600" />
+Cutting-edge, focused & high quality video tutorials for web developers and designers
 
-### `npm test` or `yarn test`
+## Syntax
 
-Runs the test watcher (Jest) in an interactive mode.
-By default, runs tests related to files changed since the last commit.
+https://syntax.fm/
+
+A Tasty Treats Podcast for Web Developers.
